@@ -1,0 +1,68 @@
+Q)1-b
+i)
+ii)
+
+In object-oriented programming, a decorator is a function that is used to modify or extend the behavior of a class or its members.
+In Angular, decorators are used extensively to add metadata to classes, properties, and methods.
+
+A decorator function is a special type of function that is prefixed with an @ symbol and is applied to a class, property, 
+or method using the decorator syntax. When the code is compiled, the decorator function is executed and 
+its result is used to modify the behavior of the class, property, or method.
+
+In Angular, the @Component decorator function is used to add metadata to a component class.
+The @Component decorator is used to specify the selector, template, and styles for the component, among other things. 
+By adding the @Component decorator to a class, you are telling Angular that this class will be used as a component and 
+providing the necessary metadata that Angular needs to create and use the component.
+
+For example, consider the following code snippet:
+reasonml
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'My App';
+}
+
+In this code, the @Component decorator is used to define the metadata for the AppComponent class. 
+The selector property specifies the HTML tag that will be used to reference this component in the template, 
+and the templateUrl and styleUrls properties specify the location of the template and stylesheets for the component.
+
+Overall, decorators are a powerful tool in Angular that allow you to add metadata and modify the behavior of your classes, 
+properties, and methods. The @Component decorator is a key part of Angular's component architecture, 
+and is used to define the metadata for a component class.
+
+Q1-C)
+In Angular, the bootstrapping module and bootstrapping component are defined in the main.ts file, 
+which is typically located in the src folder of an Angular project.
+
+The main.ts file is the entry point for an Angular application and is responsible for bootstrapping the application module 
+and component. Here's an example main.ts file:
+livescript
+
+import { enableProdMode } from '@angular/core';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+
+import { AppModule } from './app/app.module';
+import { AppComponent } from './app/app.component';
+
+if (environment.production) {
+  enableProdMode();
+}
+
+platformBrowserDynamic().bootstrapModule(AppModule)
+  .catch(err => console.error(err));
+
+In this code, the platformBrowserDynamic().bootstrapModule(AppModule) statement is responsible for bootstrapping the AppModule. 
+The AppModule is the main module of the application and is defined in the app.module.ts file.
+
+The AppComponent is the main component of the application and is defined in the app.component.ts file. 
+The AppComponent is typically declared in the declarations array of the AppModule and is used to define the root component of the application.
+
+Overall, the main.ts file is the entry point for an Angular application and defines the bootstrapping module and 
+component that are used to start the application. The AppModule and AppComponent are the main building blocks of an Angular application 
+and are responsible for defining the structure and behavior of the application.
