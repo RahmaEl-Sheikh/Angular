@@ -1,0 +1,32 @@
+nav {
+    background: linear-gradient(to right, pink, rgb(222, 122, 139));
+    color: #FFF;
+
+    .navbar-collapse {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 0;
+
+        ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            width: 30%;
+            margin: 1%;
+
+            li {
+                cursor: pointer;
+                font-size: 22px;
+                color: #FFF;
+                text-decoration: none;
+                // padding-left: 10px;
+                padding-right: 25px;
+                margin-right: 13px;
+
+            }
+        }
+    }
+
+
+}

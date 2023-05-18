@@ -9,10 +9,14 @@
 </head>
 <body>
   <app-header></app-header>
-  <app-products *ngIf="showProductTable"></app-products>
-  <app-footer></app-footer>
+  <div class="container">
+    <app-products *ngIf="showProductTable"></app-products>
+    <app-footer></app-footer>
+    
+    <button (click)="displayData()">Display Products</button>
+    <router-outlet></router-outlet>
+  </div>
   
-  <button (click)="displayData()">Display Products</button>
-  <router-outlet></router-outlet>
+  
 </body>
 </html>
