@@ -10,10 +10,40 @@
 </head>
 <body>
 
-    <h1>{{ StoreName }}</h1>
+    <h1>{{ StoreName | uppercase}}</h1>
     <img src="assets/kevok.jpg" alt="Store Logo">
-    <h3>We offer an explicit discount of: {{ Discount }}</h3>
-
+    <h3>We offer an explicit discount of: {{ Discount | percent}}</h3>
+    <!-- <h2>{{StoreName | uppercase}}</h2> -->
+    <!-- <h3>{{Discount | percent}}</h3> -->
+    <h3 *ngIf="Discount !== DiscountOffers.NoDiscount">We offer an explicit discount of: {{ Discount }}</h3>
+    
+    <select>
+      <option *ngFor="let category of categoryList">{{ category.name }}</option>
+    </select>
+    <table *ngIf="products.length > 0">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Price</th>
+        </tr>
+        <tbody>
+      <tr *ngFor="let product of productList">
+        <td>{{product.ID}}</td>
+        <td>{{product.Name}}</td>
+        <td>{{product.Price}}</td>
+      </tr>
+    </tbody>
+    </table>
  
+    <button (click)="togglePurchase()">Buy</button>
+<table *ngIf="!IsPurshased">
+  <!-- table rows -->
+</table>
+<div *ngIf="IsPurshased">
+  Thanks for purchasing from our Store {{ClientName}}!
+</div>
+    
 </body>
+
 </html>

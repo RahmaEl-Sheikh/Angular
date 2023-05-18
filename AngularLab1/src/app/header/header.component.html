@@ -1,6 +1,7 @@
 <h1>Welcome to RoroSite</h1>
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>AngularLab1</title>
@@ -9,29 +10,41 @@
   <img src="assets/angularlab1banner.png" alt="Banner">
   <a class="navbar-brand" href="#">{{ title }}</a>
 </head>
+
 <body>
-    <img src="assets/angularlab1banner.png" alt="Banner">
-    <a class="navbar-brand" href="#">{{ title }}</a>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <img src="assets/angularlab1banner.png" alt="Banner">
+  <a class="navbar-brand" href="#">{{ title }}</a>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">RomaSite</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon">Roma</span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home </a>
+          <a class="nav-link" routerLink="/">Home </a>
           <!-- <span class="sr-only">(current)</span> -->
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link" href="#">About</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Contact</a>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/products">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/users">Users</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/posts">Posts</a>
         </li>
       </ul>
     </div>
   </nav>
 </body>
+
 </html>
 

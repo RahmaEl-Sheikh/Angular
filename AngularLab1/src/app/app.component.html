@@ -9,9 +9,10 @@
 </head>
 <body>
   <app-header></app-header>
-  <app-products></app-products>
+  <app-products *ngIf="showProductTable"></app-products>
   <app-footer></app-footer>
   
-
+  <button (click)="displayData()">Display Products</button>
+  <router-outlet></router-outlet>
 </body>
 </html>
